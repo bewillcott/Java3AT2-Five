@@ -35,9 +35,9 @@
 module Java3AT2Five {
     requires javafx.controls;
     requires javafx.fxml;
-    requires transitive javafx.graphics;
     requires javafx.base;
     requires java.desktop;
+    requires java.base;
 
     opens com.bewsoftware.tafe.java3.at2.five to javafx.graphics;
     opens com.bewsoftware.tafe.java3.at2.five.view to javafx.fxml, javafx.graphics;

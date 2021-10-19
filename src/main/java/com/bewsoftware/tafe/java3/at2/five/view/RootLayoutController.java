@@ -43,8 +43,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import static com.bewsoftware.tafe.java3.at2.five.util.Constants.log;
-import static com.bewsoftware.tafe.java3.at2.five.util.Views.BLANK;
-import static com.bewsoftware.tafe.java3.at2.five.util.Views.CSVTABLE;
+import static com.bewsoftware.tafe.java3.at2.five.util.Views.TODOLIST;
 
 /**
  * FXML Controller class for the 'RootLayout.fxml' file.
@@ -80,6 +79,7 @@ public class RootLayoutController implements ViewController
     public void setApp(App app)
     {
         this.app = app;
+        app.showView(TODOLIST);
         app.addPropertyChangeListener(this);
     }
 
@@ -98,7 +98,7 @@ public class RootLayoutController implements ViewController
                         statusLabel.setText("");
                     }
 
-                    case CSVTABLE ->
+                    case TODOLIST ->
                     {
                     }
 
@@ -118,7 +118,7 @@ public class RootLayoutController implements ViewController
                             // NoOp
                         }
 
-                        case CSVTABLE ->
+                        case TODOLIST ->
                         {
                         }
 

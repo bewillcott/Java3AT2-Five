@@ -64,7 +64,7 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/bewillcott/Java3AT2-Six</url>
+        <url>https://github.com/bewillcott/Java3AT2-Five</url>
     </scm>
 
     <dependencies>
@@ -275,7 +275,7 @@
                 <plugin>
                     <groupId>org.openjfx</groupId>
                     <artifactId>javafx-maven-plugin</artifactId>
-                    <version>0.0.6</version>
+                    <version>0.0.8</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -358,7 +358,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-scm-plugin</artifactId>
-                    <version>1.11.2</version>
+                    <version>1.12.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-site-plugin</artifactId>
