@@ -60,8 +60,8 @@ public class AboutController
             = "Copyright (c) 2021 Bradley Willcott";
 
     private static final String DESCRIPTION
-            = "This program was developed for my Diploma in Software Developement "
-            + "at the South Metrolpolitan TAFE, Rockingham WA.\n\n"
+            = "This program was developed for my Diploma in Software Development "
+            + "at the South Metropolitan TAFE, Rockingham WA.\n\n"
             + "This application provides \"Drag-N-Drop\" functionality between "
             + "two lists, has a 2D Graphic arrow, and has help available.\n";
 

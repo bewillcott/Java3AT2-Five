@@ -44,7 +44,7 @@ import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowS
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.NO_DROP;
 
 /**
- * FXML Controller class
+ * FXML Controller class for the 'ToDoList.fxml' file.
  *
  * @author <a href="mailto:bw.opensource@yahoo.com">Bradley Willcott</a>
  */

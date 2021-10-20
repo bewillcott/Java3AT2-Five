@@ -37,7 +37,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -161,18 +161,6 @@ public class RootLayoutController implements ViewController
     }
 
     /**
-     * Handle the About/Manual menu item event.
-     *
-     * @param event
-     */
-    @FXML
-    private void handleManualMenuItem(ActionEvent event)
-    {
-// TODO Add code
-        event.consume();
-    }
-
-    /**
      * Handle the File/Close menu item event.
      *
      * @param event
@@ -187,6 +175,18 @@ public class RootLayoutController implements ViewController
                 )
         );
 
+        event.consume();
+    }
+
+    /**
+     * Handle the About/Manual menu item event.
+     *
+     * @param event
+     */
+    @FXML
+    private void handleManualMenuItem(ActionEvent event)
+    {
+        showHelpDialog();
         event.consume();
     }
 
@@ -209,7 +209,7 @@ public class RootLayoutController implements ViewController
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(App.class.getResource("view/About.fxml"));
-            GridPane page = (GridPane) loader.load();
+            AnchorPane page = (AnchorPane) loader.load();
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();
@@ -219,6 +219,35 @@ public class RootLayoutController implements ViewController
             Scene scene = new Scene(page);
             dialogStage.setScene(scene);
             dialogStage.setResizable(false);
+
+            // Show the dialog and wait until the user closes it
+            dialogStage.showAndWait();
+        } catch (IOException ex)
+        {
+            log(ex.toString());
+        }
+    }
+
+    /**
+     * Opens the About dialog.
+     */
+    private void showHelpDialog()
+    {
+        try
+        {
+            // Load the fxml file and create a new stage for the popup dialog.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("view/Help.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            // Create the dialog Stage.
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Help");
+            dialogStage.initModality(Modality.NONE);
+            dialogStage.initOwner(app.getPrimaryStage());
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+//            dialogStage.setResizable(false);
 
             // Show the dialog and wait until the user closes it
             dialogStage.showAndWait();

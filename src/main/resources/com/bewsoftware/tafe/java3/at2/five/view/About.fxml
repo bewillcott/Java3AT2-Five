@@ -31,38 +31,43 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" vgap="10.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bewsoftware.tafe.java3.at2.five.view.AboutController">
-    <columnConstraints>
-        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="194.0" minWidth="10.0" prefWidth="80.0" />
-        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints valignment="TOP" vgrow="NEVER" />
-        <RowConstraints valignment="TOP" vgrow="NEVER" />
-        <RowConstraints vgrow="NEVER" />
-        <RowConstraints maxHeight="165.0" minHeight="105.0" prefHeight="137.0" valignment="TOP" vgrow="NEVER" />
-        <RowConstraints vgrow="SOMETIMES" />
-        <RowConstraints valignment="TOP" vgrow="NEVER" />
-    </rowConstraints>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bewsoftware.tafe.java3.at2.five.view.AboutController">
     <children>
-        <Label text="Product:" />
-        <Label text="Version:" GridPane.rowIndex="1" />
-        <Label text="Build Date:" GridPane.rowIndex="2" />
-        <Label text="Description:" GridPane.rowIndex="3" />
-        <Label text="Copyright:" GridPane.rowIndex="4" />
-        <Label text="License:" GridPane.rowIndex="5" />
-        <Label fx:id="productLabel" text="" GridPane.columnIndex="1" />
-        <Label fx:id="verionLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <Label fx:id="buildDateLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <TextArea fx:id="descriptionTextArea" editable="false" focusTraversable="false" text="" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <Label fx:id="copyrightLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <TextArea fx:id="copyrightTextArea" editable="false" focusTraversable="false" text="" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <GridPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="194.0" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="TOP" vgrow="NEVER" />
+                <RowConstraints valignment="TOP" vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints maxHeight="165.0" minHeight="105.0" prefHeight="137.0" valignment="TOP" vgrow="NEVER" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints valignment="TOP" vgrow="NEVER" />
+            </rowConstraints>
+            <children>
+                <Label text="Product:" />
+                <Label text="Version:" GridPane.rowIndex="1" />
+                <Label text="Build Date:" GridPane.rowIndex="2" />
+                <Label text="Description:" GridPane.rowIndex="3" />
+                <Label text="Copyright:" GridPane.rowIndex="4" />
+                <Label text="License:" GridPane.rowIndex="5" />
+                <Label fx:id="productLabel" text="" GridPane.columnIndex="1" />
+                <Label fx:id="verionLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="buildDateLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextArea fx:id="descriptionTextArea" editable="false" focusTraversable="false" text="" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="copyrightLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextArea fx:id="copyrightTextArea" editable="false" focusTraversable="false" text="" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </GridPane>
     </children>
-    <padding>
-        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-    </padding>
-</GridPane>
+</AnchorPane>
