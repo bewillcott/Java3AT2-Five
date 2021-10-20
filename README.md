@@ -7,7 +7,3 @@ This project contains a GUI application that provides "Drag-N-Drop"
 functionality between two lists, has a 2D Graphic arrow, and has help
 available.
 
-## Implementation
-
-**Under Construction**
- 
