@@ -118,6 +118,8 @@ public class ToDoListController implements ViewController
         selectedIndex = todoListView.getSelectionModel().getSelectedIndex();
 
         arrowPath.setFill(BAD_DROP.color);
+        app.setStatusText("");
+        
         event.consume();
     }
 
@@ -135,11 +137,11 @@ public class ToDoListController implements ViewController
         if (event.getTransferMode() == TransferMode.MOVE)
         {
             todoListView.getItems().remove(selectedIndex);
-            selectedIndex = -1;
+            app.setStatusText("Drag-N-Drop successful");
         }
 
-        arrowPath.setFill(CLEAR.color);
-
+             selectedIndex = -1;
+       arrowPath.setFill(CLEAR.color);
         event.consume();
     }
 
@@ -255,6 +257,7 @@ public class ToDoListController implements ViewController
 
         arrowPath.setFill(BAD_DROP.color);
         arrowPath.setRotate(180.0);
+        app.setStatusText("");
 
         event.consume();
     }
@@ -273,9 +276,10 @@ public class ToDoListController implements ViewController
         if (event.getTransferMode() == TransferMode.MOVE)
         {
             wipListView.getItems().remove(selectedIndex);
-            selectedIndex = -1;
+            app.setStatusText("Drag-N-Drop successful");
         }
 
+        selectedIndex = -1;
         arrowPath.setFill(CLEAR.color);
         arrowPath.setRotate(0.0);
 

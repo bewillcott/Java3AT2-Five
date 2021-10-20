@@ -48,7 +48,7 @@ public class HelpController
     private void initialize()
     {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(
-                getClass().getResourceAsStream("/help/help.html"))))
+                HelpController.class.getResourceAsStream("/help/help.html"))))
         {
             StringBuilder sb = new StringBuilder();
             String line;
