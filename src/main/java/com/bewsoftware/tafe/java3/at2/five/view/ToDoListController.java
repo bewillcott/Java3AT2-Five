@@ -27,6 +27,7 @@
 package com.bewsoftware.tafe.java3.at2.five.view;
 
 import com.bewsoftware.tafe.java3.at2.five.App;
+import com.bewsoftware.tafe.java3.at2.five.gfx2d.Arrow;
 import com.bewsoftware.tafe.java3.at2.five.util.DataSource;
 import com.bewsoftware.tafe.java3.at2.five.util.ViewController;
 import java.beans.PropertyChangeEvent;
@@ -37,7 +38,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.StrokeType;
 
-import static com.bewsoftware.tafe.java3.at2.five.gfx2d.Arrow.build;
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.BAD_DROP;
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.CLEAR;
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.GOOD_DROP;
@@ -86,7 +86,7 @@ public class ToDoListController implements ViewController
     private void initialize()
     {
         // Build long and skinny arrow
-        arrowPath.getElements().addAll(build(100, 75).getElements());
+        arrowPath.getElements().addAll(Arrow.build(100, 75).getElements());
         arrowPath.setStrokeType(StrokeType.INSIDE);
         arrowPath.setStroke(Color.BLACK);
         arrowPath.setFill(Color.BLACK);
