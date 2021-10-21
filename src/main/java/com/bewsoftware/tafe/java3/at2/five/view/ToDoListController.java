@@ -27,6 +27,7 @@
 package com.bewsoftware.tafe.java3.at2.five.view;
 
 import com.bewsoftware.tafe.java3.at2.five.App;
+import com.bewsoftware.tafe.java3.at2.five.gfx2d.Arrow;
 import com.bewsoftware.tafe.java3.at2.five.util.DataSource;
 import com.bewsoftware.tafe.java3.at2.five.util.ViewController;
 import java.beans.PropertyChangeEvent;
@@ -37,7 +38,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.StrokeType;
 
-import static com.bewsoftware.tafe.java3.at2.five.gfx2d.Arrow.build;
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.BAD_DROP;
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.CLEAR;
 import static com.bewsoftware.tafe.java3.at2.five.view.ToDoListController.ArrowStatus.GOOD_DROP;
@@ -86,7 +86,7 @@ public class ToDoListController implements ViewController
     private void initialize()
     {
         // Build long and skinny arrow
-        arrowPath.getElements().addAll(build(100, 75).getElements());
+        arrowPath.getElements().addAll(Arrow.build(100, 75).getElements());
         arrowPath.setStrokeType(StrokeType.INSIDE);
         arrowPath.setStroke(Color.BLACK);
         arrowPath.setFill(Color.BLACK);
@@ -118,6 +118,8 @@ public class ToDoListController implements ViewController
         selectedIndex = todoListView.getSelectionModel().getSelectedIndex();
 
         arrowPath.setFill(BAD_DROP.color);
+        app.setStatusText("");
+        
         event.consume();
     }
 
@@ -135,11 +137,11 @@ public class ToDoListController implements ViewController
         if (event.getTransferMode() == TransferMode.MOVE)
         {
             todoListView.getItems().remove(selectedIndex);
-            selectedIndex = -1;
+            app.setStatusText("Drag-N-Drop successful");
         }
 
-        arrowPath.setFill(CLEAR.color);
-
+             selectedIndex = -1;
+       arrowPath.setFill(CLEAR.color);
         event.consume();
     }
 
@@ -255,6 +257,7 @@ public class ToDoListController implements ViewController
 
         arrowPath.setFill(BAD_DROP.color);
         arrowPath.setRotate(180.0);
+        app.setStatusText("");
 
         event.consume();
     }
@@ -273,9 +276,10 @@ public class ToDoListController implements ViewController
         if (event.getTransferMode() == TransferMode.MOVE)
         {
             wipListView.getItems().remove(selectedIndex);
-            selectedIndex = -1;
+            app.setStatusText("Drag-N-Drop successful");
         }
 
+        selectedIndex = -1;
         arrowPath.setFill(CLEAR.color);
         arrowPath.setRotate(0.0);
 

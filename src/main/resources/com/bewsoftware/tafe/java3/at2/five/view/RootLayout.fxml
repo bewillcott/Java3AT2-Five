@@ -63,7 +63,7 @@
                 <Separator prefWidth="200.0" />
                 <AnchorPane>
                     <children>
-                        <Label text="Status" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="statusLabel" text="" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
                     </children>
                 </AnchorPane>
             </children>

@@ -79,8 +79,8 @@ public class RootLayoutController implements ViewController
     public void setApp(App app)
     {
         this.app = app;
-        app.showView(TODOLIST);
         app.addPropertyChangeListener(this);
+        app.showView(TODOLIST);
     }
 
     @Override
@@ -100,6 +100,7 @@ public class RootLayoutController implements ViewController
 
                     case TODOLIST ->
                     {
+                        statusLabel.setText("");
                     }
 
                     default ->
@@ -120,6 +121,7 @@ public class RootLayoutController implements ViewController
 
                         case TODOLIST ->
                         {
+                            // NoOp
                         }
 
                         default ->
@@ -191,15 +193,6 @@ public class RootLayoutController implements ViewController
     }
 
     /**
-     * Controller initialization.
-     */
-    @FXML
-    private void initialize()
-    {
-        // TODO Do I need this?
-    }
-
-    /**
      * Opens the About dialog.
      */
     private void showAboutDialog()
@@ -247,7 +240,6 @@ public class RootLayoutController implements ViewController
             dialogStage.initOwner(app.getPrimaryStage());
             Scene scene = new Scene(page);
             dialogStage.setScene(scene);
-//            dialogStage.setResizable(false);
 
             // Show the dialog and wait until the user closes it
             dialogStage.showAndWait();
