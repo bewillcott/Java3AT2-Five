@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>90</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>valign=center
+
+Copyright © 2021
+-
+Name: Bradley Willcott
+ID:   M198449
+Date: 21 October 2021
+
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>20</y>
+      <w>310</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>valign=center
+halign=center
+fontsize=16
+lw=2
+
+*Java3 AT2 Five*
+GUI Application Specification
+v1.0
+
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>230</y>
+      <w>250</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+layer=1
+&lt;&lt;interface&gt;&gt;
+ViewController
+--
+
+--
++setApp(app:App) : void
++setFocus() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>450</y>
+      <w>360</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+RootLayoutController
+--
+- aboutMenuItem : MenuItem
+- app : App
+- manualMenuItem : MenuItem
+
+--
++ RootLayoutController()
+
+- handleAboutMenuItem(event:ActionEvent) : void
+- handleExitMenuItem(event:ActionEvent) : void
+- handleManualMenuItem(event:ActionEvent) : void
+- showAboutDialog() : void
+- showHelpDialog() : void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>450</y>
+      <w>400</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+ToDoListController
+--
+- app : App
+- todoListView : ListView&lt;String&gt;
+- wipListView : ListView&lt;String&gt;
+
+--
+- initialize() : void
+
+- todoListView_OnDragDetected(event:MouseEvent) : void
+- todoListView_OnDragDone(event:DragEvent) : void
+- todoListView_OnDragDropped(event:DragEvent) : void
+- todoListView_OnDragEntered(event:DragEvent) : void
+- todoListView_OnDragExited(event:DragEvent) : void
+- todoListView_OnDragOver(event:DragEvent) : void
+
+- wipListView_OnDragDetected(event:MouseEvent) : void
+- wipListView_OnDragDone(event:DragEvent) : void
+- wipListView_OnDragDropped(event:DragEvent) : void
+- wipListView_OnDragEntered(event:DragEvent) : void
+- wipListView_OnDragExited(event:DragEvent) : void
+- wipListView_OnDragOver(event:DragEvent) : void
+
+{innerclass
+&lt;&lt;enumeration&gt;&gt;
+ArrowStatus
+--
+BAD_DROP
+NO_DROP
+GOOD_DROP
+CLEAR
+
+innerclass}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>450</y>
+      <w>250</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+BlankController
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>530</x>
+      <y>130</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>java.beans.PropertyChangeListener
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>150</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>310</y>
+      <w>380</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>360.0;10.0;360.0;70.0;10.0;70.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>310</y>
+      <w>360</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;340.0;70.0;340.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>310</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>990</y>
+      <w>330</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+Constants
+--
+_+ BUILD_DATE : String_
+_+ DOUBLE_LINE : String_
+_+ LINE : String_
+_+ PRODUCT_TITLE : String_
+_+ TITLE_INDENT : String_
+_+ VERSION : String_
+
+--
+- Constants()
+
+_+ log(format:String, args:Object...) : void_
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>1270</y>
+      <w>530</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+App
+--
+_+ PROP_ACTIVEVIEW : String_
+_+ PROP_STATUSTEXT : String_
+
+- activeView : Views
+- primaryStage : Stage
+- propertyChangeSupport : PropertyChangeSupport
+- rootLayout : BorderPane
+- statusText : String
+
+--
+_+ main(args:String[]) : void_
+
++ App()
+
++ start(primaryStage:Stage) : void
++ addPropertyChangeListener(listener:PropertyChangeListener) : void
++ getPrimaryStage() : Stage
++ setStatusText(statusText:String) : void
++ initRootLayout() : voidvoid
++ removePropertyChangeListener(istener:PropertyChangeListener) : void
++ showView(view:Views) : void
++ start(primaryStage:Stage) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>1730</y>
+      <w>290</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+javafx.application::Application
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>1580</y>
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>1270</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+AboutController
+--
+- buildDateLabel : Label
+- descriptionTextArea : TextArea
+- productLabel : Label
+- rootPane : GridPane
+- verionLabel : Label
+
+--
+- initialize() : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1720</y>
+      <w>290</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+Main
+--
+
+--
++ main(args:String[]) : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>1150</y>
+      <w>230</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+HelpController
+--
+- webView : WebView
+
+--
+- initialize() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>990</y>
+      <w>170</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+Ref&lt;T&gt;
+--
++ val : T
+
+--
++ Ref()
++ Ref(val:T)
+
++ toString() : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>1580</y>
+      <w>400</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>380.0;10.0;380.0;80.0;10.0;80.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>1160</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;150.0;60.0;150.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>1160</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;60.0;10.0;60.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>500</y>
+      <w>60</w>
+      <h>790</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;770.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>630</y>
+      <w>390</w>
+      <h>660</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0;370.0;310.0;370.0;640.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>850</y>
+      <w>360</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>340.0;10.0;340.0;90.0;10.0;90.0;10.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>1440</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+&lt;&lt;enumeration&gt;&gt;
+Views
+--
+BLANK
+TODOLIST
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>560</y>
+      <w>150</w>
+      <h>950</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>110.0;930.0;10.0;930.0;10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>1470</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>990</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>bg=green
+transparency=0
+layer=1
+&lt;&lt;utility&gt;&gt;
+DataSource
+--
+_- DATA : String[]_
+
+--
+- DataSource()
+
+_+ getData() : List&lt;String&gt;_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>850</y>
+      <w>60</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;use&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
